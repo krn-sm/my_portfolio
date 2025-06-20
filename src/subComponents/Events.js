@@ -233,7 +233,11 @@ const Events = () => {
                   key={idx}
                   src={img}
                   alt={`${event.title} ${idx + 1}`}
-                  onClick={() => openModal(event.images, idx)}
+                  onClick={() => {
+                    if (window.innerWidth >= 768) {
+                      openModal(event.images, idx);
+                    }
+                  }}
                 />
               ))}
             </Gallery>

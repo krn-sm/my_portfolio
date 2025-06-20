@@ -218,7 +218,11 @@ const Achievements = () => {
                   key={idx}
                   src={img}
                   alt={`${achv.title} ${idx + 1}`}
-                  onClick={() => openModal(achv.images, idx)}
+                  onClick={() => {
+                    if (window.innerWidth >= 768) {
+                      openModal(achv.images, idx);
+                    }
+                  }}
                 />
               ))}
             </Gallery>

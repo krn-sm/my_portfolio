@@ -35,6 +35,7 @@ const Card = styled.div`
 
   @media (max-width: 480px) {
     padding: 1.5rem 1rem;
+    margin-left: 1rem;
   }
 `;
 
@@ -52,6 +53,11 @@ const CardTitle = styled.h2`
   @media (max-width: 480px) {
     font-size: 1.3rem;
   }
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
 
 const LanguagesContainer = styled.div`
@@ -124,19 +130,6 @@ const ResumePage = () => {
     { name: "Tamil", level: "90%" },
   ];
 
-  const handlePrintPDF = () => {
-    const iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = require("../data/Kiran_S_M_Resume.pdf");
-    iframe.onload = () => {
-      setTimeout(() => {
-        iframe.contentWindow.focus();
-        iframe.contentWindow.print();
-      }, 500);
-    };
-    document.body.appendChild(iframe);
-  };
-
   return (
     <Container>
       <LogoComponent />
@@ -161,7 +154,9 @@ const ResumePage = () => {
         </LanguagesContainer>
       </Card>
 
-      <PrintButton onClick={handlePrintPDF}>Print Resume</PrintButton>
+      <StyledLink href="/Kiran_S_M_Resume.pdf" download>
+        <PrintButton>📄 Print Resume</PrintButton>
+      </StyledLink>
     </Container>
   );
 };
