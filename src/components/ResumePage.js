@@ -156,7 +156,11 @@ const ResumePage = () => {
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.4, // faster than default (0.6–1s)
+          ease: "easeOut",
+        }}
+        viewport={{ once: true }}
       >
         <Achievements />
       </motion.div>
@@ -165,7 +169,11 @@ const ResumePage = () => {
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.4, // faster than default (0.6–1s)
+          ease: "easeOut",
+        }}
+        viewport={{ once: true }}
       >
         <Events />
       </motion.div>
@@ -174,7 +182,11 @@ const ResumePage = () => {
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.4, // faster than default (0.6–1s)
+          ease: "easeOut",
+        }}
+        viewport={{ once: true }}
       >
         <Certifications />
       </motion.div>
@@ -183,7 +195,11 @@ const ResumePage = () => {
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 0.4, // faster than default (0.6–1s)
+          ease: "easeOut",
+        }}
+        viewport={{ once: true }}
       >
         <Card>
           <CardTitle>Languages</CardTitle>
