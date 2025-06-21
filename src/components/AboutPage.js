@@ -159,6 +159,7 @@ const Main = styled(motion.div)`
 
   @media (max-width: 480px) {
     width: 70vw;
+    height: 100%
     font-size: calc(0.4rem + 1vw);
     padding: 1rem;
     left: 2rem;

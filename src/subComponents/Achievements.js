@@ -11,13 +11,13 @@ const achievements = [
   {
     title: "3rd Position – IEEE GREEN REHAB CHALLENGE",
     description:
-      "Secured third place in a highly competitive ideathon entitled AI systems for Environmental Restoration sponsored by IEEE Kerala Section held during Kerala State Council for Science, Technology and Environment (KSCSTE) TECHFEST 2024 jointly organized by KSCSTE, IIT Palakkad, and NSS College of Engineering. The event challenged participants to propose innovative solutions for sustainable technologies.",
+      "Secured third place in a highly competitive ideathon entitled AI systems for Environmental Restoration sponsored by IEEE Kerala Section held during KSCSTE TECHFEST 2024 jointly organized by KSCSTE, IIT Palakkad, and NSS College of Engineering. The event challenged participants to propose innovative solutions for sustainable technologies. Our team was selected for presenting an innovative idea titled 'A Smart Waste Management System: Empowering User Participation with AI'. The system proposed the use of a mobile app integrated with AI to encourage responsible waste disposal through QR scanning, real-time bin monitoring, and a gamified reward system.",
     images: [ach1_1, ach1_2, ach1_3],
   },
   {
     title: "Finalist – IEEE MYOSA 2.0 2025",
     description:
-      "Selected among the top 10 teams across India for the prestigious Development Phase of IEEE MYOSA 2.0 organized by the IEEE Sensors Council. The challenge focused on real-world applications of sensor technology. Our solution involved an intelligent sleep monitoring pad using multi-sensor integration and AI-powered analytics to improve sleep health, which demonstrated significant potential for healthcare impact and innovation.",
+      "Selected among the top teams across India for the prestigious Development Phase of IEEE MYOSA 2.0 organized by the IEEE Sensors Council. The challenge focused on real-world applications of sensor technology. Our solution involved an AI Smart Traffic Management System using ESP32. It features real-time vehicle detection, emergency vehicle prioratization, gesture based pedestrian crossings, and traffic violation monitoring in a functional mini-town setup.",
     images: [ach2_1],
   },
 ];

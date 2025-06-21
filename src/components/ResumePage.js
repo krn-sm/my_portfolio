@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import BigTitle from "../subComponents/BigTitle";
 import Achievements from "../subComponents/Achievements";
 import Events from "../subComponents/Events";
+import Certifications from "../subComponents/Certifications";
 
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.5)`};
@@ -32,7 +34,9 @@ const Card = styled.div`
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-
+  &:hover {
+    border-color: #000;
+  }
   @media (max-width: 480px) {
     padding: 1.5rem 1rem;
     margin-left: 1rem;
@@ -90,12 +94,12 @@ const ProgressBar = styled.div`
   overflow: hidden;
 `;
 
-const ProgressFill = styled.div`
-  width: ${(props) => props.width};
+const ProgressFill = styled(motion.div)`
   height: 100%;
   background-color: ${(props) => props.theme.text};
   transition: width 0.5s ease;
 `;
+
 
 const PrintButton = styled.button`
   display: block;
@@ -114,6 +118,7 @@ const PrintButton = styled.button`
   &:hover {
     background-color: #fff;
     color: #000;
+    border-color: #000;
   }
 
   @media (max-width: 480px) {
@@ -121,6 +126,17 @@ const PrintButton = styled.button`
     font-size: 1rem;
   }
 `;
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 const ResumePage = () => {
   const languages = [
@@ -136,27 +152,69 @@ const ResumePage = () => {
       <PowerButton />
       <SocialIcons />
       <BigTitle text="RESUME" top="5rem" left="5rem" />
-      <Achievements />
-      <Events />
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Achievements />
+      </motion.div>
 
-      {/* Language Card */}
-      <Card>
-        <CardTitle>Languages</CardTitle>
-        <LanguagesContainer>
-          {languages.map((lang, index) => (
-            <LanguageItem key={index}>
-              <LanguageName>{lang.name}</LanguageName>
-              <ProgressBar>
-                <ProgressFill width={lang.level} />
-              </ProgressBar>
-            </LanguageItem>
-          ))}
-        </LanguagesContainer>
-      </Card>
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Events />
+      </motion.div>
 
-      <StyledLink href="/Kiran_S_M_Resume.pdf" download>
-        <PrintButton>📄 Print Resume</PrintButton>
-      </StyledLink>
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Certifications />
+      </motion.div>
+
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Card>
+          <CardTitle>Languages</CardTitle>
+          <LanguagesContainer>
+            {languages.map((lang, index) => (
+              <LanguageItem key={index}>
+                <LanguageName>{lang.name}</LanguageName>
+                <ProgressBar>
+                  <ProgressFill
+                    initial={{ width: 0 }}
+                    whileInView={{ width: lang.level }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                  />
+                </ProgressBar>
+              </LanguageItem>
+            ))}
+          </LanguagesContainer>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <StyledLink href="/resume.pdf" download>
+          <PrintButton>📄 Print Resume</PrintButton>
+        </StyledLink>
+      </motion.div>
     </Container>
   );
 };
