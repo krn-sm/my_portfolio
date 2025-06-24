@@ -14,7 +14,7 @@ const Box = styled.div`
   position: relative;
   padding: 4rem 2rem;
   @media (max-width: 768px) {
-    width: 70%;
+    width: 90%;
   }
 `;
 
@@ -119,7 +119,7 @@ const MySkillsPage = () => {
       ],
     },
     {
-      title: "VCS",
+      title: "Version Control System",
       skills: [
         { name: "Git", icon: "/skills/git.png" },
         { name: "GitHub", icon: "/skills/github.png" },
