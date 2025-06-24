@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Github } from "../components/AllSvgs";
 
 const Box = styled(motion.li)`
   background-color: ${(props) => props.theme.text};
@@ -90,10 +90,12 @@ const Tag = styled.span`
 
 const Footer = styled.footer`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.$center ? "center" : "space-between")};
+  align-items: center;
 `;
 
-const Link = styled(NavLink)`
+
+const VisitButton = styled.a`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
   text-decoration: none;
@@ -101,7 +103,7 @@ const Link = styled(NavLink)`
   border-radius: 0 0 0 50px;
   font-size: calc(1em + 0.5vw);
 
-  ${Box}:hover & {
+  &:hover {
     background-color: ${(props) => props.theme.text};
     color: ${(props) => props.theme.body};
   }
@@ -117,6 +119,16 @@ const Link = styled(NavLink)`
   }
 `;
 
+const Git = styled.a`
+  color: inherit;
+  text-decoration: none;
+
+  &:hover svg {
+    fill: ${(props) => props.theme.text};
+  }
+`;
+
+
 const Item = {
   hidden: {
     scale: 0,
@@ -131,7 +143,7 @@ const Item = {
 };
 
 const Cards = (props) => {
-  const { id, name, description, tags, demo } = props.data;
+  const { id, name, description, tags, demo, github } = props.data;
   return (
     <Box key={id} variants={Item}>
       <Title>{name}</Title>
@@ -141,11 +153,20 @@ const Cards = (props) => {
           return <Tag key={id}>#{t}</Tag>;
         })}
       </Tags>
-      <Footer>
-        <Link to={{ pathname: `${demo}` }} target="_blank">
-          Visit
-        </Link>
-      </Footer>
+     <Footer $center={!demo}>
+  {demo && (
+    <VisitButton href={demo} target="_blank" rel="noopener noreferrer">
+      Visit
+    </VisitButton>
+  )}
+
+  {github && (
+    <Git href={github} target="_blank" rel="noopener noreferrer">
+      <Github width={30} height={30} />
+    </Git>
+  )}
+</Footer>
+
     </Box>
   );
 };
