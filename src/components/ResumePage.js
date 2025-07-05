@@ -227,7 +227,7 @@ const ResumePage = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <StyledLink href="/resume.pdf" download>
+        <StyledLink href="/Kiran_S_M_Resume.pdf" download>
           <PrintButton>📄 Print Resume</PrintButton>
         </StyledLink>
       </motion.div>

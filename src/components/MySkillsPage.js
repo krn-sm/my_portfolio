@@ -113,23 +113,30 @@ const MySkillsPage = () => {
       title: "Frontend Development",
       skills: [
         { name: "HTML", icon: "/skills/html.png" },
-        { name: "CSS", icon: "/skills/css.png" },
+        { name: "TailwindCSS", icon: "/skills/tailwindcss.png" },
         { name: "JavaScript", icon: "/skills/javascript.png" },
         { name: "React", icon: "/skills/react.png" },
       ],
     },
     {
-      title: "Version Control System",
-      skills: [
-        { name: "Git", icon: "/skills/git.png" },
-        { name: "GitHub", icon: "/skills/github.png" },
-      ],
-    },
+  title: "Tools & Platforms",
+  skills: [
+    { name: "Git", icon: "/skills/git.png" },
+    { name: "GitHub", icon: "/skills/github.png" },
+    { name: "Visual Studio", icon: "/skills/visualstudio.png" },
+    { name: "Google Colab", icon: "/skills/colab1.png" },
+    { name: "MS Word", icon: "/skills/word.png" },
+    { name: "MS PowerPoint", icon: "/skills/powerpoint.png" },
+    { name: "MS Excel", icon: "/skills/excel.png" },
+  ],
+}
+,
     {
       title: "Simulation and Design",
       skills: [
         { name: "Proteus", icon: "/skills/proteus.png" },
         { name: "LTspice", icon: "/skills/ltspice.png" },
+        { name: "CST Studio", icon: "/skills/cst.png" },
         { name: "Arduino IDE", icon: "/skills/arduino.png" },
         { name: "Figma", icon: "/skills/figma.png" },
         { name: "Verilog", icon: "/skills/verilog.png" },
