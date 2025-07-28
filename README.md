@@ -25,7 +25,7 @@ It’s designed for recruiters, peers, and collaborators to quickly explore my w
 ![HOME](https://github.com/krn-sm/my_portfolio/blob/main/Portfolio%20Images/Home.png)
 ![Intro](https://github.com/krn-sm/my_portfolio/blob/main/Portfolio%20Images/Intro.png)
 ![Home Mobile](https://github.com/krn-sm/my_portfolio/blob/main/Portfolio%20Images/Home-Mobile.png)
-![Intro Mobile](https://github.com/krn-sm/my_portfolio/blob/main/Portfolio%20Images/Intro.png)
+![Intro Mobile](https://github.com/krn-sm/my_portfolio/blob/main/Portfolio%20Images/Intro-Mobile.png)
 
 ---
 
