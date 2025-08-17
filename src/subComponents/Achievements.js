@@ -100,6 +100,7 @@ const ImgThumb = styled.img`
   box-shadow: 0 6px 20px rgba(255, 193, 140, 0.2);
   cursor: pointer;
   transition: transform 0.3s ease;
+  object-fit: cover;
 
   &:hover {
     transform: scale(1.05);

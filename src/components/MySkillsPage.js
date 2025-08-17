@@ -23,13 +23,16 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 6rem;
-
+  margin-right: 6rem;
+  margin-left: 2rem;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
+    margin-right: 0rem;
+    margin-left: 0rem;
   }
 `;
 
