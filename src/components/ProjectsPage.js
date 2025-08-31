@@ -14,7 +14,7 @@ import BigTitle from "../subComponents/BigTitle";
 // Main container
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 400vh;
+  height: ${(props) => props.numProjects * 50}vh; /* dynamic height */
   position: relative;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ const container = {
 
 const ProjectsPage = () => {
   const ref = useRef(null);
-const yinyang = useRef(null);
+  const yinyang = useRef(null);
 
   useEffect(() => {
     const element = ref.current;
@@ -61,7 +61,9 @@ const yinyang = useRef(null);
       if (element) {
         element.style.transform = `translateX(${-offset}px)`;
       }
-      yinyang.current.style.transform = `rotate(` + -window.pageYOffset + `deg)`;
+      if (yinyang.current) {
+        yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
+      }
     };
 
     window.addEventListener("scroll", rotate);
@@ -70,11 +72,16 @@ const yinyang = useRef(null);
 
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
+      <Box numProjects={Project.length}>
         <PowerButton />
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
-        <Main ref={ref} variants={container} initial='hidden' animate='show' >
+        <Main
+          ref={ref}
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           {Project.map((d) => (
             <Card key={d.id} data={d} />
           ))}
@@ -82,10 +89,9 @@ const yinyang = useRef(null);
         <Rotate ref={yinyang}>
           <YinYang fill={DarkTheme.text} width={60} height={60} />
         </Rotate>
-        <BigTitle text='PROJECTS' top='10%' right='20%' />
+        <BigTitle text="PROJECTS" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );
 };
-
 export default ProjectsPage;

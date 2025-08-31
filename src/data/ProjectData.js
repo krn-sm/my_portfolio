@@ -59,6 +59,33 @@ export const Project = [
   },
   {
     id: 7,
+    name: "Music Emotion Dashboard",
+  description:
+    "An interactive dashboard built with Streamlit and Plotly to analyze moods, artist trends, and playlist emotional journeys using the Spotify dataset.",
+  tags: ["python", "streamlit", "plotly", "data-visualization", "spotify"],
+  demo: "https://music-emotions.streamlit.app",
+  github: "https://github.com/krn-sm/music-emotion-dashboard",
+  },
+  {
+    id: 8,
+  name: "Rock-Paper-Scissors Game",
+  description:
+    "A browser-based Rock-Paper-Scissors game with score tracking and animated game-over screen, built using JavaScript and deployed on GitHub Pages.",
+  tags: ["javascript", "html", "css", "game"],
+  demo: "https://krn-sm.github.io/Rock_Paper_Scissors",
+  github: "https://github.com/krn-sm/Rock_Paper_Scissors",
+  },
+  {
+    id: 9,
+  name: "Tic-Tac-Toe Game",
+  description:
+    "A browser-based Tic-Tac-Toe game built with JavaScript, featuring winner detection, draw handling, and a restart option.",
+  tags: ["javascript", "html", "css", "game"],
+  demo: "https://krn-sm.github.io/Tic-Tac-Toe",
+  github: "https://github.com/krn-sm/Tic-Tac-Toe",
+  },
+  {
+    id: 10,
     name: "Wax Pen",
     description:
       "A creative design engineering project involving hardware innovation and functional prototyping.",
